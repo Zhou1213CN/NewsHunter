@@ -12,9 +12,7 @@ class NewsData {
 //    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
 //    "S", "T", "U", "V", "W", "X", "Y", "Z"]
 //    let alphabetIndex = 0
-    
-    
-    
+
     //You can sort the results in the following orders: Date published, Popularity of source, ( Relevancy to search keyword )
 
     let urlBase1 = "https://newsapi.org/v2/everything?q="
@@ -28,12 +26,9 @@ class NewsData {
         var articles: [Article]
        
     }
-    
 
-    
     var articleArray: [Article] = []
-    
-    
+
     func getData(completed: @escaping ()->()) {
          
          print("🕸 We are accessing the url \(urlString)")

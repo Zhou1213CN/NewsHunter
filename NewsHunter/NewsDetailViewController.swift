@@ -17,16 +17,24 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var article: Article!
+    var newsofCollection: NewsCollection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if newsofCollection == nil {
+            newsofCollection = NewsCollection()
+        }
 //        if article == nil{
-//            article = Article()
+//            article = Article(from: <#Decoder#>)
 //        }
-        updateUserInterface()
+        
+//        if article.title != nil{
+//            updateUserInterface()
+//        }
+        
        
     }
+    
     func updateUserInterface(){
         titleLabel.text = article.title
         publishedAtTextField.text = article.publishedAt
@@ -39,17 +47,16 @@ class NewsDetailViewController: UIViewController {
         } catch {
             print("ERROR: Could not get image from url \(url)")
         }
-        
     }
     
-    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        let isPresentingInAddMode = presentingViewController is UINavigationController
-        if isPresentingInAddMode {
-            dismiss(animated: true, completion: nil)
-        } else{
-            navigationController?.popViewController(animated: true)
-        }
+    func updateFromInterface(){
+        newsofCollection.headline = titleLabel.text!
+        newsofCollection.date = publishedAtTextField.text ?? ""
+        newsofCollection.text = contentLabel.text!
+        newsofCollection.image = self.imageView.image ?? UIImage()
+        newsofCollection.link = urlTextField.text!
     }
+    
     
     
    

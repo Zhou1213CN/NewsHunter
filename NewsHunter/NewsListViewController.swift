@@ -29,7 +29,7 @@ class NewsListViewController: UIViewController {
         news.urlString = news.urlBase1 + searchText + news.urlBase2 + sortByPopularity + news.urlBase3
         news.getData{
             DispatchQueue.main.async {
-                self.navigationItem.title = "News Shown: \(self.news.articleArray.count)"
+               // self.navigationItem.title = "News Shown: \(self.news.articleArray.count)"
                 self.sortTable()
             }
         }
