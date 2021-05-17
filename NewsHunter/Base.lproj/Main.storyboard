@@ -134,7 +134,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-0Z-bPI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublishedAt :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-0Z-bPI">
                                                     <rect key="frame" x="18" y="169" width="288" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -160,7 +160,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="authorLabel" destination="NNy-0Z-bPI" id="2oC-UW-Mrx"/>
+                                            <outlet property="publishedAtLabel" destination="NNy-0Z-bPI" id="2oC-UW-Mrx"/>
                                             <outlet property="sourceLabel" destination="f1y-xB-spn" id="RJp-a2-Hbj"/>
                                             <outlet property="titleLabel" destination="941-6u-Hjt" id="v8l-eE-slj"/>
                                             <segue destination="eYZ-0t-o7H" kind="show" identifier="ShowDetail" id="GdS-zJ-Vwe"/>
@@ -185,8 +185,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
                                 <segments>
+                                    <segment title="Alphabetic"/>
                                     <segment title="Latest"/>
-                                    <segment title="Popularity"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

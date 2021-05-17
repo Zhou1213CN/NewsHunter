@@ -29,7 +29,7 @@ class NewsListViewController: UIViewController {
         news.getData{
             DispatchQueue.main.async {
                 self.navigationItem.title = "News Shown: \(self.news.articleArray.count)"
-                self.tableView.reloadData()
+                self.sortTable()
             }
         }
         
@@ -44,8 +44,21 @@ class NewsListViewController: UIViewController {
         sortSegmentedControl.layer.borderColor = UIColor.white.cgColor
         sortSegmentedControl.layer.borderWidth = 1.0
     }
+    func sortTable(){
+        switch sortSegmentedControl.selectedSegmentIndex {
+        case 0:
+            news.articleArray.sort(by: {$0.title < $1.title} )
+        case 1:
+            news.articleArray.sort(by: {$0.publishedAt > $1.publishedAt} )
+        default:
+            print("This should never happen.")
+        }
+        tableView.reloadData()
+    }
     
     @IBAction func segmentPressed(_ sender: UISegmentedControl) {
+        sortTable()
+
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail"{
@@ -64,7 +77,7 @@ extension NewsListViewController: UITableViewDelegate,UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
-        cell.authorLabel?.text = news.articleArray[indexPath.row].author
+        cell.publishedAtLabel?.text = news.articleArray[indexPath.row].publishedAt
         cell.sourceLabel?.text = news.articleArray[indexPath.row].source.name
         cell.titleLabel?.text = news.articleArray[indexPath.row].title
         return cell
