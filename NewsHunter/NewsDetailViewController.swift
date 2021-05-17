@@ -14,7 +14,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var publishedAtTextField: UITextField!
     @IBOutlet weak var contentLabel: UILabel!
     
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var urlTextField: UITextField!
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -33,7 +33,7 @@ class NewsDetailViewController: UIViewController {
         titleLabel.text = article.title
         publishedAtTextField.text = article.publishedAt
         contentLabel.text = article.content
-        urlLabel.text = article.url
+        urlTextField.text = article.url
         guard let url = URL(string: article.urlToImage ?? "") else {return}
         do {
             let data = try Data(contentsOf: url)

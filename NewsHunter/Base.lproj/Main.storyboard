@@ -117,7 +117,7 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" id="Z3h-Cb-1Uh">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="CSE-GQ-taO">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="CSE-GQ-taO">
                                 <rect key="frame" x="16" y="10.5" width="288" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
@@ -164,72 +164,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2021-05-15T01:49:36Z" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zb-W8-rZ5">
-                                <rect key="frame" x="16" y="132" width="288" height="34"/>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2021-05-15T01:49:36Z" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zb-W8-rZ5">
+                                <rect key="frame" x="16" y="135" width="288" height="34"/>
                                 <color key="textColor" name="PrimaryColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Daily Crunch: Stripe buys Y Combinator alum Bouncer for undisclosed sum&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yci-lp-xfP">
-                                <rect key="frame" x="16" y="63" width="288" height="61"/>
+                                <rect key="frame" x="16" y="54" width="288" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news1" translatesAutoresizingMaskIntoConstraints="NO" id="o5j-by-QzX">
-                                <rect key="frame" x="11" y="287" width="142" height="205"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="142" id="QcC-R1-Xko"/>
-                                    <constraint firstAttribute="height" constant="205" id="lfW-jK-hh5"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;https://gizmodo.uol.com.br/clubhouse-para-android-chega-ao-brasil-na-terca-feira/&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w87-ie-gWL">
-                                <rect key="frame" x="0.0" y="174" width="320" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" name="PrimaryColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDV-wp-xUk">
-                                <rect key="frame" x="11" y="243" width="298" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDV-wp-xUk">
+                                <rect key="frame" x="6" y="223.5" width="308.5" height="72"/>
+                                <string key="text">Click URL above &amp; Read MORE
+Content</string>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="26"/>
                                 <color key="textColor" name="PrimaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-jU-fsb">
-                                <rect key="frame" x="155" y="287" width="159" height="232"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="232" id="hv8-PX-gW6"/>
-                                    <constraint firstAttribute="width" constant="159" id="z66-N4-9XX"/>
-                                </constraints>
+                                <rect key="frame" x="6" y="306" width="171" height="193"/>
                                 <string key="text">To get a roundup of TechCrunchs biggest and most important stories delivered to your inbox every day at 3 p.m. PDT, subscribe here.\r\nWrapping the week here at Daily Crunch with a big thanks to Henry …</string>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://gizmodo.uol.com.br/clubhouse-para-android-chega-ao-brasil-na-terca-feira/" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-LG-gtf">
+                                <rect key="frame" x="6" y="192.5" width="308" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news1" translatesAutoresizingMaskIntoConstraints="NO" id="o5j-by-QzX">
+                                <rect key="frame" x="185" y="333" width="119" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o5j-by-QzX" secondAttribute="height" multiplier="119:94" id="WIF-vO-4ey"/>
+                                    <constraint firstAttribute="width" constant="119" id="eYq-cD-blT"/>
+                                    <constraint firstAttribute="height" constant="94" id="na8-ru-riS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bzZ-2V-iZL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o5j-by-QzX" firstAttribute="top" secondItem="TDV-wp-xUk" secondAttribute="bottom" constant="8" symbolic="YES" id="25V-KA-Y9g"/>
-                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="yci-lp-xfP" secondAttribute="trailing" constant="16" id="2TH-ye-tQh"/>
-                            <constraint firstItem="yci-lp-xfP" firstAttribute="top" secondItem="bzZ-2V-iZL" secondAttribute="top" constant="19" id="2cY-EA-ray"/>
-                            <constraint firstItem="9zb-W8-rZ5" firstAttribute="top" secondItem="yci-lp-xfP" secondAttribute="bottom" constant="8" symbolic="YES" id="Dbx-nE-jIM"/>
-                            <constraint firstItem="TDV-wp-xUk" firstAttribute="top" secondItem="w87-ie-gWL" secondAttribute="bottom" constant="8" symbolic="YES" id="GCy-fB-gkA"/>
-                            <constraint firstItem="o5j-by-QzX" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="11" id="IQa-kB-vWj"/>
-                            <constraint firstItem="9zb-W8-rZ5" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="16" id="J2I-oC-miG"/>
-                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="9zb-W8-rZ5" secondAttribute="trailing" constant="16" id="JS3-6Z-YFx"/>
-                            <constraint firstItem="Ebo-jU-fsb" firstAttribute="bottom" secondItem="bzZ-2V-iZL" secondAttribute="bottom" id="OkR-Qn-wa5"/>
-                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="TDV-wp-xUk" secondAttribute="trailing" constant="11" id="QhU-gx-iER"/>
-                            <constraint firstItem="yci-lp-xfP" firstAttribute="top" secondItem="bzZ-2V-iZL" secondAttribute="top" constant="19" id="SYl-y1-rN4"/>
-                            <constraint firstItem="TDV-wp-xUk" firstAttribute="top" secondItem="w87-ie-gWL" secondAttribute="bottom" constant="8" symbolic="YES" id="Taf-YW-n13"/>
-                            <constraint firstItem="w87-ie-gWL" firstAttribute="top" secondItem="9zb-W8-rZ5" secondAttribute="bottom" constant="8" symbolic="YES" id="aPu-0Z-orT"/>
-                            <constraint firstItem="9zb-W8-rZ5" firstAttribute="top" secondItem="yci-lp-xfP" secondAttribute="bottom" constant="8" symbolic="YES" id="aXl-aq-MhL"/>
-                            <constraint firstItem="w87-ie-gWL" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" id="c8Q-hb-6UK"/>
-                            <constraint firstItem="w87-ie-gWL" firstAttribute="trailing" secondItem="bzZ-2V-iZL" secondAttribute="trailing" id="fYh-Ra-Thc"/>
-                            <constraint firstItem="TDV-wp-xUk" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="11" id="g2w-Gi-kFr"/>
-                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="Ebo-jU-fsb" secondAttribute="trailing" constant="6" id="p6u-oc-1Mo"/>
-                            <constraint firstItem="yci-lp-xfP" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="16" id="qYn-qk-9kH"/>
-                            <constraint firstItem="w87-ie-gWL" firstAttribute="top" secondItem="9zb-W8-rZ5" secondAttribute="bottom" constant="8" symbolic="YES" id="wuC-oT-MIy"/>
+                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="9VQ-LG-gtf" secondAttribute="trailing" constant="6" id="0P4-kZ-fWH"/>
+                            <constraint firstItem="o5j-by-QzX" firstAttribute="top" secondItem="TDV-wp-xUk" secondAttribute="bottom" constant="37.5" id="2Sb-ge-2ON"/>
+                            <constraint firstItem="9VQ-LG-gtf" firstAttribute="centerY" secondItem="O6j-9U-2tJ" secondAttribute="centerY" constant="-50" id="3RM-Di-t3d"/>
+                            <constraint firstItem="o5j-by-QzX" firstAttribute="leading" secondItem="Ebo-jU-fsb" secondAttribute="trailing" constant="8" symbolic="YES" id="6ZK-L2-y0W"/>
+                            <constraint firstItem="Ebo-jU-fsb" firstAttribute="top" secondItem="TDV-wp-xUk" secondAttribute="bottom" constant="10.5" id="DwU-fE-FLP"/>
+                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="bottom" secondItem="o5j-by-QzX" secondAttribute="bottom" constant="92" id="NCQ-Qe-JlI"/>
+                            <constraint firstItem="Ebo-jU-fsb" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="6" id="OPl-si-svz"/>
+                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="o5j-by-QzX" secondAttribute="trailing" constant="16" id="SgT-vM-5of"/>
+                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="9zb-W8-rZ5" secondAttribute="trailing" constant="16" id="So3-jP-VOe"/>
+                            <constraint firstItem="yci-lp-xfP" firstAttribute="top" secondItem="bzZ-2V-iZL" secondAttribute="top" constant="10" id="Zvv-X2-KGy"/>
+                            <constraint firstItem="o5j-by-QzX" firstAttribute="leading" secondItem="Ebo-jU-fsb" secondAttribute="trailing" constant="8" symbolic="YES" id="i6E-NM-dTo"/>
+                            <constraint firstItem="9zb-W8-rZ5" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="16" id="jAb-dH-fkS"/>
+                            <constraint firstItem="9zb-W8-rZ5" firstAttribute="top" secondItem="yci-lp-xfP" secondAttribute="bottom" constant="20" id="jtB-nP-kYQ"/>
+                            <constraint firstItem="TDV-wp-xUk" firstAttribute="centerY" secondItem="O6j-9U-2tJ" secondAttribute="centerY" id="kAo-8c-gY5"/>
+                            <constraint firstItem="TDV-wp-xUk" firstAttribute="centerX" secondItem="O6j-9U-2tJ" secondAttribute="centerX" id="nNi-Ja-TLm"/>
+                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="trailing" secondItem="yci-lp-xfP" secondAttribute="trailing" constant="16" id="oYN-zT-d1O"/>
+                            <constraint firstItem="yci-lp-xfP" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="16" id="rnM-gb-FCc"/>
+                            <constraint firstItem="bzZ-2V-iZL" firstAttribute="bottom" secondItem="Ebo-jU-fsb" secondAttribute="bottom" constant="20" id="uZn-nR-Jbj"/>
+                            <constraint firstItem="TDV-wp-xUk" firstAttribute="centerX" secondItem="O6j-9U-2tJ" secondAttribute="centerX" id="wue-yO-BzN"/>
+                            <constraint firstItem="9VQ-LG-gtf" firstAttribute="leading" secondItem="bzZ-2V-iZL" secondAttribute="leading" constant="6" id="y46-VU-QeN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C2S-C5-0ha">
@@ -244,12 +242,12 @@
                         <outlet property="imageView" destination="o5j-by-QzX" id="6xs-JF-thx"/>
                         <outlet property="publishedAtTextField" destination="9zb-W8-rZ5" id="xaB-Nj-rKS"/>
                         <outlet property="titleLabel" destination="yci-lp-xfP" id="VL6-Vb-6tw"/>
-                        <outlet property="urlLabel" destination="w87-ie-gWL" id="eWy-qw-3c2"/>
+                        <outlet property="urlTextField" destination="9VQ-LG-gtf" id="F4a-0T-9Ib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fuI-rf-vR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3834.375" y="16.901408450704224"/>
+            <point key="canvasLocation" x="3832.5" y="15.845070422535212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Qd-kM-zkF">
