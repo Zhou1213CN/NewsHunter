@@ -17,20 +17,14 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var article: Article!
-    var newsofCollection: NewsCollection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if newsofCollection == nil {
-            newsofCollection = NewsCollection()
-        }
-//        if article == nil{
-//            article = Article(from: <#Decoder#>)
-//        }
         
-//        if article.title != nil{
-//            updateUserInterface()
-//        }
+        
+
+         updateUserInterface()
+        
         
        
     }
@@ -49,15 +43,4 @@ class NewsDetailViewController: UIViewController {
         }
     }
     
-    func updateFromInterface(){
-        newsofCollection.headline = titleLabel.text!
-        newsofCollection.date = publishedAtTextField.text ?? ""
-        newsofCollection.text = contentLabel.text!
-        newsofCollection.image = self.imageView.image ?? UIImage()
-        newsofCollection.link = urlTextField.text!
-    }
-    
-    
-    
-   
 }

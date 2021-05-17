@@ -11,6 +11,8 @@
 		118555B32652BDE60089816B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118555B22652BDE50089816B /* SearchViewController.swift */; };
 		118555BA2652D7900089816B /* NewsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118555B92652D7900089816B /* NewsCollection.swift */; };
 		118555DA2652ED0E0089816B /* NewsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118555D92652ED0E0089816B /* NewsAddViewController.swift */; };
+		118555DD2652F3290089816B /* UIViewController+alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118555DC2652F3280089816B /* UIViewController+alert.swift */; };
+		118555E2265303AA0089816B /* NewsReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118555E1265303AA0089816B /* NewsReactionViewController.swift */; };
 		118E084A264E9AFC00F0229C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 118E0849264E9AFC00F0229C /* GoogleService-Info.plist */; };
 		118E084F264EA61D00F0229C /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E084E264EA61D00F0229C /* NewsListViewController.swift */; };
 		118E0852264EA83300F0229C /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E0851264EA83300F0229C /* NewsTableViewCell.swift */; };
@@ -30,6 +32,8 @@
 		118555B22652BDE50089816B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		118555B92652D7900089816B /* NewsCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollection.swift; sourceTree = "<group>"; };
 		118555D92652ED0E0089816B /* NewsAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAddViewController.swift; sourceTree = "<group>"; };
+		118555DC2652F3280089816B /* UIViewController+alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+alert.swift"; sourceTree = "<group>"; };
+		118555E1265303AA0089816B /* NewsReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReactionViewController.swift; sourceTree = "<group>"; };
 		118E0849264E9AFC00F0229C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		118E084E264EA61D00F0229C /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		118E0851264EA83300F0229C /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				118E0851264EA83300F0229C /* NewsTableViewCell.swift */,
 				118E0854264EB5BD00F0229C /* NewsDetailViewController.swift */,
 				118555D92652ED0E0089816B /* NewsAddViewController.swift */,
+				118555E1265303AA0089816B /* NewsReactionViewController.swift */,
+				118555DC2652F3280089816B /* UIViewController+alert.swift */,
 				11B392F4264E991200D02050 /* Main.storyboard */,
 				11B392F7264E991500D02050 /* Assets.xcassets */,
 				11B392F9264E991500D02050 /* LaunchScreen.storyboard */,
@@ -253,6 +259,7 @@
 			files = (
 				118E0855264EB5BD00F0229C /* NewsDetailViewController.swift in Sources */,
 				11B392F3264E991200D02050 /* LoginViewController.swift in Sources */,
+				118555DD2652F3290089816B /* UIViewController+alert.swift in Sources */,
 				11B392EF264E991200D02050 /* AppDelegate.swift in Sources */,
 				118555B32652BDE60089816B /* SearchViewController.swift in Sources */,
 				118555BA2652D7900089816B /* NewsCollection.swift in Sources */,
@@ -260,6 +267,7 @@
 				118555742652906F0089816B /* Article.swift in Sources */,
 				11B392F1264E991200D02050 /* SceneDelegate.swift in Sources */,
 				118555DA2652ED0E0089816B /* NewsAddViewController.swift in Sources */,
+				118555E2265303AA0089816B /* NewsReactionViewController.swift in Sources */,
 				118E084F264EA61D00F0229C /* NewsListViewController.swift in Sources */,
 				118E0858264EC64400F0229C /* NewsData.swift in Sources */,
 			);

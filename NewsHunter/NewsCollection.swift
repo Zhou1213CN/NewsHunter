@@ -13,25 +13,25 @@ class NewsCollection {
     var date: String
     var text: String
     var link: String
-    var image: UIImage
+    // var image: UIImage
     var postingUserID: String
     var documentID: String
     
     var dictionary: [String: Any] {
-        return ["headline":headline, "date": date, "text": text, "link": link, "image": image, "postingUserID": postingUserID]
+        return ["headline":headline, "date": date, "text": text, "link": link, "postingUserID": postingUserID]
     }
     
-    init(headline: String, date: String, text: String, link: String, image: UIImage, postingUerID:String, documentID: String){
+    init(headline: String, date: String, text: String, link: String, postingUerID:String, documentID: String){
         self.headline = headline
         self.date = date
         self.text = text
         self.link = link
-        self.image = UIImage()
+      //  self.image = UIImage()
         self.postingUserID = postingUerID
         self.documentID = documentID
     }
     convenience init(){
-        self.init(headline: "", date: "", text: "", link: "", image: UIImage(), postingUerID:"", documentID: "")
+        self.init(headline: "", date: "", text: "", link: "", postingUerID:"", documentID: "")
     }
     
     func saveData(completed: @escaping (Bool) -> () ) {
@@ -44,7 +44,7 @@ class NewsCollection {
             }
             self.postingUserID = postingUserID
             let dataToSave: [String: Any] = self.dictionary
-            if self.documentID != "" { // save data to an existing document
+            if self.documentID == "" { // save data to an existing document
                 // get the path for the exiseting document
                 var ref: DocumentReference? = nil
                 ref = db.collection("news").addDocument(data: dataToSave) { (error) in
