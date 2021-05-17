@@ -9,7 +9,17 @@ import Foundation
 
 class NewsData {
 
-    var urlString = "https://newsapi.org/v2/everything?q=tesla&language=en&from=2021-04-17&sortBy=publishedAt&apiKey=ea58613c9c084c38bf7e0269201e5c65"
+//    let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R",
+//    "S", "T", "U", "V", "W", "X", "Y", "Z"]
+//    let alphabetIndex = 0
+    
+    
+    
+    //You can sort the results in the following orders: Date published, Popularity of source, ( Relevancy to search keyword )
+
+    let urlBase1 = "https://newsapi.org/v2/everything?q="
+    let urlBase2 = "&language=en&from=2021-04-17&sortBy=publishedAt&apiKey=ea58613c9c084c38bf7e0269201e5c65"
+    var urlString = ""
 
     struct Returned: Codable {
         var totalResults: Int
@@ -22,9 +32,9 @@ class NewsData {
     
     var articleArray: [Article] = []
     
-   // var articlesCount = 3
     
     func getData(completed: @escaping ()->()) {
+         
          print("🕸 We are accessing the url \(urlString)")
 
         // Create a URL

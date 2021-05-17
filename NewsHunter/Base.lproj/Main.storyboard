@@ -9,45 +9,108 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="lz6-Of-nu8">
+            <objects>
+                <viewController id="Ffp-HP-G6R" customClass="SearchViewController" customModule="NewsHunter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eN4-7i-B31">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="ZUP-mk-rhs">
+                                <rect key="frame" x="16" y="79" width="288" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Lph-II-Miv"/>
+                                    <constraint firstAttribute="width" constant="288" id="TZ9-dz-3Ca"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search for a News Topic :" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RUe-gw-Jbb">
+                                <rect key="frame" x="16" y="237" width="288" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="8Yr-sU-5vp"/>
+                                    <constraint firstAttribute="width" constant="288" id="BnO-Wp-bHr"/>
+                                </constraints>
+                                <color key="textColor" name="PrimaryColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x7T-dd-h4K">
+                                <rect key="frame" x="16" y="291" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cf4-yO-guc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9Z-r7-iqg">
+                                <rect key="frame" x="136" y="366" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <segue destination="foe-py-4g8" kind="show" id="xCa-B5-fyu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P4N-kK-Tz6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x7T-dd-h4K" firstAttribute="leading" secondItem="P4N-kK-Tz6" secondAttribute="leading" constant="16" id="3Ep-Jk-3Qn"/>
+                            <constraint firstItem="RUe-gw-Jbb" firstAttribute="top" secondItem="ZUP-mk-rhs" secondAttribute="bottom" constant="58" id="CTC-pY-4ts"/>
+                            <constraint firstItem="I9Z-r7-iqg" firstAttribute="leading" secondItem="P4N-kK-Tz6" secondAttribute="leading" constant="136" id="Cij-42-vLp"/>
+                            <constraint firstItem="P4N-kK-Tz6" firstAttribute="bottom" secondItem="I9Z-r7-iqg" secondAttribute="bottom" constant="123" id="J1R-hz-eM0"/>
+                            <constraint firstItem="RUe-gw-Jbb" firstAttribute="leading" secondItem="P4N-kK-Tz6" secondAttribute="leading" constant="16" id="MeD-ud-Izj"/>
+                            <constraint firstItem="P4N-kK-Tz6" firstAttribute="trailing" secondItem="RUe-gw-Jbb" secondAttribute="trailing" constant="16" id="P2Y-ev-XJa"/>
+                            <constraint firstItem="ZUP-mk-rhs" firstAttribute="leading" secondItem="P4N-kK-Tz6" secondAttribute="leading" constant="16" id="Y5e-XP-pey"/>
+                            <constraint firstItem="x7T-dd-h4K" firstAttribute="top" secondItem="RUe-gw-Jbb" secondAttribute="bottom" constant="8" symbolic="YES" id="YwT-d8-xmB"/>
+                            <constraint firstItem="ZUP-mk-rhs" firstAttribute="top" secondItem="P4N-kK-Tz6" secondAttribute="top" constant="35" id="hG8-1p-wor"/>
+                            <constraint firstItem="P4N-kK-Tz6" firstAttribute="trailing" secondItem="ZUP-mk-rhs" secondAttribute="trailing" constant="16" id="hPz-Rk-s3R"/>
+                            <constraint firstItem="P4N-kK-Tz6" firstAttribute="trailing" secondItem="x7T-dd-h4K" secondAttribute="trailing" constant="16" id="omI-JY-7Fj"/>
+                            <constraint firstItem="P4N-kK-Tz6" firstAttribute="trailing" secondItem="I9Z-r7-iqg" secondAttribute="trailing" constant="136" id="osz-rk-6Lr"/>
+                            <constraint firstItem="I9Z-r7-iqg" firstAttribute="top" secondItem="x7T-dd-h4K" secondAttribute="bottom" constant="25" id="xCE-Ul-7YT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Z4-u7-wKI">
+                        <barButtonItem key="leftBarButtonItem" title="." id="rJL-nq-f2j">
+                            <connections>
+                                <segue destination="IA3-UG-2fP" kind="unwind" unwindAction="unwindSignOutPressedWithSegue:" id="eck-8S-6J5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newsLabel" destination="ZUP-mk-rhs" id="eUH-nw-cX0"/>
+                        <outlet property="searchButton" destination="I9Z-r7-iqg" id="kID-fu-alg"/>
+                        <outlet property="searchTextField" destination="x7T-dd-h4K" id="7ND-gq-VDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xf-jg-wRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IA3-UG-2fP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1027.5" y="-424.64788732394368"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="NewsHunter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="l4J-3J-XU7">
-                                <rect key="frame" x="0.0" y="54" width="320" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="AyU-do-gpM"/>
-                                    <constraint firstAttribute="width" secondItem="l4J-3J-XU7" secondAttribute="height" multiplier="16:5" id="W6a-kM-6Lu"/>
-                                    <constraint firstAttribute="width" constant="320" id="xv8-Y6-MVE"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="l4J-3J-XU7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="y4d-VJ-jDa"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YYT-Wy-F3f"/>
                     <connections>
-                        <outlet property="imageView" destination="l4J-3J-XU7" id="p8v-tf-kNE"/>
-                        <segue destination="foe-py-4g8" kind="show" identifier="FirstShowSegue" animates="NO" id="Hf4-8h-yk9"/>
+                        <segue destination="Ffp-HP-G6R" kind="show" identifier="FirstShowSegue" id="QKY-BU-Tid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963.75" y="54.929577464788736"/>
+            <point key="canvasLocation" x="64" y="55"/>
         </scene>
         <!--News List View Controller-->
         <scene sceneID="rJ8-RB-mpB">
             <objects>
                 <viewController id="foe-py-4g8" customClass="NewsListViewController" customModule="NewsHunter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBb-Xo-S88">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-Nl-7we">
@@ -117,13 +180,13 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" id="Z3h-Cb-1Uh">
-                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="CSE-GQ-taO">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="CSE-GQ-taO">
                                 <rect key="frame" x="16" y="10.5" width="288" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="PrimaryColor"/>
                                 <segments>
-                                    <segment title="A-Z"/>
                                     <segment title="Latest"/>
+                                    <segment title="Popularity"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -161,7 +224,7 @@
             <objects>
                 <viewController id="eYZ-0t-o7H" customClass="NewsDetailViewController" customModule="NewsHunter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O6j-9U-2tJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2021-05-15T01:49:36Z" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9zb-W8-rZ5">
@@ -280,7 +343,7 @@ Content</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQO-UZ-emY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="55.580357142857139"/>
+            <point key="canvasLocation" x="-1044" y="55"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fO3-Le-EV4">

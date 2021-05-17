@@ -11,7 +11,7 @@ import AVFoundation
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
+//    @IBOutlet weak var imageView: UIImageView!
     
     var authUI: FUIAuth!
     var audioPlayer: AVAudioPlayer!
@@ -21,15 +21,15 @@ class LoginViewController: UIViewController {
         authUI = FUIAuth.defaultAuthUI()
         // You need to adopt a FUIAuthDelegate protocol to receive callback
         authUI.delegate = self
-        imageView.alpha = 0.0
+        //imageView.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         signIn()
-        UIView.animate(withDuration: 5.0) {
-                    self.imageView.alpha = 1.0
-        }
+//        UIView.animate(withDuration: 5.0) {
+//                    self.imageView.alpha = 1.0
+//        }
         
     }
     
@@ -54,9 +54,9 @@ class LoginViewController: UIViewController {
     }
     
     func signIn() {
-        UIView.animate(withDuration: 5.0) {
-            self.imageView.alpha = 1.0
-        }
+//        UIView.animate(withDuration: 5.0) {
+//            self.imageView.alpha = 1.0
+//        }
         
         let providers: [FUIAuthProvider] = [
           FUIGoogleAuth(),

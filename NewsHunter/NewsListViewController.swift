@@ -14,7 +14,7 @@ class NewsListViewController: UIViewController {
     
     var news = NewsData()
    
-    var count = 0
+    var searchText = ""
     
     override func viewDidLoad() {
         
@@ -25,8 +25,10 @@ class NewsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        news.urlString = news.urlBase1 + searchText + news.urlBase2
         news.getData{
             DispatchQueue.main.async {
+                self.navigationItem.title = "News Shown: \(self.news.articleArray.count)"
                 self.tableView.reloadData()
             }
         }
