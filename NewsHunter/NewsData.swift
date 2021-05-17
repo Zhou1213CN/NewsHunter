@@ -18,7 +18,8 @@ class NewsData {
     //You can sort the results in the following orders: Date published, Popularity of source, ( Relevancy to search keyword )
 
     let urlBase1 = "https://newsapi.org/v2/everything?q="
-    let urlBase2 = "&language=en&from=2021-04-17&sortBy=publishedAt&apiKey=ea58613c9c084c38bf7e0269201e5c65"
+    let urlBase2 = "&language=en&from=2021-04-17&"
+    let urlBase3 = "&apiKey=ea58613c9c084c38bf7e0269201e5c65"
     var urlString = ""
 
     struct Returned: Codable {

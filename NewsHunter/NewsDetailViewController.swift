@@ -13,9 +13,7 @@ class NewsDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var publishedAtTextField: UITextField!
     @IBOutlet weak var contentLabel: UILabel!
-    
     @IBOutlet weak var urlTextField: UITextField!
-    
     @IBOutlet weak var imageView: UIImageView!
     
     var article: Article!

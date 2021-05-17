@@ -9,10 +9,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var newsLabel: UIImageView!
-    
     @IBOutlet weak var searchTextField: UITextField!
-    
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var popularitySwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
@@ -25,6 +25,19 @@ class SearchViewController: UIViewController {
         searchText = searchText.replacingOccurrences(of: "", with: "%20")
         let destination = segue.destination as! NewsListViewController
         destination.searchText = searchText
+        
+        var sortByPopularity = "sortBy="
+        if popularitySwitch.isOn == true{
+            sortByPopularity = "sortBy=popularity"
+            let destination = segue.destination as! NewsListViewController
+            destination.sortByPopularity = sortByPopularity
+        }
+        if popularitySwitch.isOn == false{
+            let destination = segue.destination as! NewsListViewController
+            destination.sortByPopularity = sortByPopularity
+            
+        }
+         
     }
 
     
